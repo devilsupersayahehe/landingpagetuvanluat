@@ -245,6 +245,7 @@
       const Hero = () => {
         return (
           <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden">
+            {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
               <motion.div 
                 initial={{ scale: 1 }}
@@ -262,7 +263,8 @@
               <div className="absolute inset-0 bg-black/20"></div>
             </div>
 
-            <div className="container mx-auto px-4 md:px-6 relative z-10 text-white mt-16">
+            {/* Adjusted padding-top (pt-32 md:pt-40) to prevent Header from overlapping content */}
+            <div className="container mx-auto px-4 md:px-6 relative z-10 text-white pt-32 md:pt-40">
               <motion.div 
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -279,7 +281,8 @@
                   <span className="font-semibold text-sm md:text-base tracking-wide">Đồng hành pháp lý cùng bạn</span>
                 </motion.div>
                 
-                <h1 className="text-5xl md:text-7xl font-bold font-serif leading-snug mb-8 drop-shadow-lg">
+                {/* Adjusted leading (line-height) and tracking (letter-spacing) for better desktop display */}
+                <h1 className="text-5xl md:text-7xl font-bold font-serif leading-tight md:leading-tight mb-8 drop-shadow-lg tracking-tight">
                   Dịch Vụ Luật Sư <br/>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-500 filter drop-shadow-none">
                     Chuyên Nghiệp & Tận Tâm
@@ -298,11 +301,10 @@
                     Tư Vấn Ngay 
                     <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                   </a>
+                  {/* Changed background to dark semi-transparent for better visibility */}
                   <a 
-                    href="https://zalo.me/2171133625094125529"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center transition-all hover:border-white/50"
+                    href="#dich-vu"
+                    className="bg-slate-900/40 hover:bg-slate-900/60 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center transition-all hover:border-white/50"
                   >
                     Tìm Hiểu Dịch Vụ
                   </a>
@@ -310,6 +312,7 @@
               </motion.div>
             </div>
 
+            {/* Decorative Wave */}
             <div className="absolute bottom-0 left-0 right-0">
                <svg className="w-full h-16 md:h-24 fill-white" viewBox="0 0 1440 320" preserveAspectRatio="none">
                   <path fillOpacity="1" d="M0,224L80,197.3C160,171,320,117,480,112C640,107,800,149,960,165.3C1120,181,1280,171,1360,165.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
